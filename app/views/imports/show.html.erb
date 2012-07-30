@@ -1,9 +1,8 @@
-
 <h1>Datafile Import</h1>
 
-ID: <%= @import.id %><br>
-File: <%= @import.datafile.current_path %><br>
+<p>Imported <%= pluralize @import.sales.count, 'record' %></p> 
 
+<p>Total Sales: <%= @import.sales.reduce(0){|t,s| t + s.total } %>
 
 <p>
 <%= link_to "Upload another file", new_import_path %><br>
