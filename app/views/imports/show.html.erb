@@ -1,0 +1,11 @@
+
+<h1>Datafile Import</h1>
+
+ID: <%= @import.id %><br>
+File: <%= @import.datafile.current_path %><br>
+
+
+<p>
+<%= link_to "Upload another file", new_import_path %><br>
+<%= link_to "Home", root_path %>
+</p>

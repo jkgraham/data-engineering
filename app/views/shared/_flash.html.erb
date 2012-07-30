@@ -1,0 +1,7 @@
+<% unless flash.nil? %>
+	<div id="flash">
+	<% flash.to_hash.each_pair do |k, m| %>
+		<div class="<%= k.to_s %>"><%= m %></div>
+	<% end %>
+	</div>
+<% end %>

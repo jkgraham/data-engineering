@@ -1,0 +1,10 @@
+<%= form_for(@import, multipart: true) do |f| %>
+	<p>
+	<%= f.label :datafile, "Import File:" %>
+	<%= f.file_field :datafile %>
+	</p>
+
+	<p>
+	<%= f.submit "Upload" %>
+	</p>
+<% end %>
