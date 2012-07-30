@@ -7,9 +7,17 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<%= render partial: 'shared/flash', locals: {flash: flash} %>
+	<header>
+		<% if current_user %>
+		  Welcome <%= current_user.nickname %> |
+		  <%= link_to "Log-out", logout_path %>
+		<% else %>
+		  <%= link_to "Log-in", login_path %>
+		<% end %>
+	</header>
 
-<%= yield %>
+	<%= render partial: 'shared/flash', locals: {flash: flash} %>
 
+	<%= yield %>
 </body>
 </html>

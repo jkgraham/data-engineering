@@ -16,3 +16,5 @@ group :development do
 end
 
 gem 'carrierwave'
+gem 'omniauth'
+gem 'omniauth-github'
